@@ -18,3 +18,8 @@ class Business(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE)
     neighborhood=models.ForeignKey(Neighbourhood,on_delete=models.CASCADE)
     email=models.EmailField()
+
+class Post(models.Model):
+    post=models.CharField(max_length=200)
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    neighborhood=models.ForeignKey(Neighbourhood,on_delete=models.CASCADE)
