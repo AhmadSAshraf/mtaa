@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  {% if title %}
+  <title>Mtaa - {{title}}</title>
+  {% else %}
+  <title> Mtaa </title>
+  {% endif %}
+
+  {% block styles %}
+
+  {% endblock %}
+
+</head>
+
+<body>
+  {% block content %} <h1 class='text-center'>Mtaa</h1>
+  <p class='text-center'>Welcome to Mtaa, post latest happenings, Meet new neighbours.</p> {%endblock%}
+
+  {% block scripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  {% endblock %}
+</body>
+
+</html>
