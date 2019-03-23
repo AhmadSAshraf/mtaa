@@ -11,6 +11,50 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="{% url 'home' %}">Mtaa</a>
     </div>
+    <div class="col-sm-6 col-md-6"  style="margin-top:08px;">
+        {% if user.is_authenticated %}
+        <ul>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-expanded="false">Account
+                      <span class="caret"></span>
+                  </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a href="{% url 'home' %}">Home</a>
+              </li>
+              <li>
+                <a href="#">Profile</a>
+              </li>
+              <li>
+                <a href="#">Post a locationn</a>
+              </li>
+              <li>
+                <a href="/accounts/password/change">Change Password</a>
+              </li>
+              <li>
+                <a href="#">Logout</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        {% else %}
+        <li>
+          <a class='btn btn-default' href="/accounts/login">Login</a>
+        </li>
+
+        {% endif %}
+      </div>
+      <div class="col-sm-4 col-md-4">
+
+ <form class="navbar-form" role="search" action="#">
+
+   <div class="input-group search">
+     <input type="text" class="form-control" placeholder='search...' name="search" style="max-width:215px; height: 28px; background-color:rgb(250, 250, 250);line-height: 38px; text-align: center;">
+   </div>
+
+ </form>
+</div>
+
   </div>
 </nav>
 </body>
