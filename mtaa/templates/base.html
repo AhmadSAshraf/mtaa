@@ -1,4 +1,6 @@
 {% load bootstrap3 %}
+{% load static%}
+
 <!DOCTYPE html>
 <html>
 
@@ -13,11 +15,14 @@
 
   {% block styles %}
   {% bootstrap_css %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
   {% endblock %}
 
 </head>
 
 <body>
+  {% include "navbar.html" %}
+
   {% block content %} <h1 class='text-center'>Mtaa</h1>
   <p class='text-center'>Welcome to Mtaa, post latest happenings, Meet new neighbours.</p> {%endblock%}
 
