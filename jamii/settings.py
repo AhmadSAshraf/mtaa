@@ -58,6 +58,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 INSTALLED_APPS = [
     'bootstrap3',
+    'crispy_forms',
     'mtaa.apps.MtaaConfig',
     'django.contrib.admin',
     'django.contrib.auth',
