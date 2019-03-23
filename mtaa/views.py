@@ -14,7 +14,6 @@ def home(request):
 def profile(request):
     current_user = request.user
     profile = Profile.objects.all()
-    pics = Image.objects.all()
 
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST,instance=request.user)
