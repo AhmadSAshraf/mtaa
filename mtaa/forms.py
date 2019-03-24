@@ -20,7 +20,7 @@ class ProfileUpdateForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ['image']
+        fields = ['image','bio']
 
 class NeighbourhoodForm(forms.ModelForm):
     class Meta:
