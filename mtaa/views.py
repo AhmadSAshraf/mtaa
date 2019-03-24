@@ -6,8 +6,14 @@ from .forms import *
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
+    neighbourhoods = Neighbourhood.objects.all()
+    return render(request, 'home.html',{"neighbourhoods":neighbourhoods,})
 
+
+@login_required(login_url='/accounts/login/')
+def neighbourhood(request):
+    neighbourhoods = Neighbourhood.objects.all()
+    return render(request,'home.html',{"neighbourhoods":neighbourhoods})
 
 
 @login_required(login_url='/accounts/login/')
@@ -50,9 +56,3 @@ def addneighbourhood(request):
            neighbourform=NeighbourhoodForm(request.POST,request.FILES)
 
     return render(request,'neighbourhood_form.html',{"neighbourform":neighbourform})
-
-
-@login_required(login_url='/accounts/login/')
-def neighbourhood(request):
-    neighbourhood = Neighbourhood.objects.all()
-    return render(request,'home.html',{"neighbourhood":neighbourhood})

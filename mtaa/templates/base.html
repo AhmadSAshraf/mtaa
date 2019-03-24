@@ -16,15 +16,16 @@
   {% block styles %}
   {% bootstrap_css %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   {% endblock %}
 
 </head>
 
 <body>
   {% include "navbar.html" %}
-
   {% block content %} <h1 class='text-center'>Mtaa</h1>
-  <p class='text-center'>Welcome to Mtaa, post latest happenings, Meet new neighbours.</p> {%endblock%}
+  <p class='text-center'>Welcome to Mtaa, post latest happenings, Meet new neighbours.</p>
+  {%endblock%}
 
   {% block scripts %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
