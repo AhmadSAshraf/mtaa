@@ -25,4 +25,5 @@ class ProfileUpdateForm(forms.ModelForm):
 class NeighbourhoodForm(forms.ModelForm):
     class Meta:
         model=Neighbourhood
+        exclude=['admin']
         fields = ['name','location','population']

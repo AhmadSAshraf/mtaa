@@ -50,3 +50,9 @@ def addneighbourhood(request):
            neighbourform=NeighbourhoodForm(request.POST,request.FILES)
 
     return render(request,'neighbourhood_form.html',{"neighbourform":neighbourform})
+
+
+@login_required(login_url='/accounts/login/')
+def neighbourhood(request):
+    neighbourhood = Neighbourhood.objects.all()
+    return render(request,'home.html',{"neighbourhood":neighbourhood})

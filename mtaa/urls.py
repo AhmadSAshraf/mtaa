@@ -6,6 +6,8 @@ from django.conf.urls.static import static
 urlpatterns=[
     url('^$',views.home,name = 'home'),
     url(r'^profile/', views.profile, name='profile'),
+    url('^neighbourhood', views.neighbourhood, name='neighbourhood'),
+    url('^addneighbourhood',views.addneighbourhood,name="addneighbourhood"),
 ]
 
 if settings.DEBUG:
