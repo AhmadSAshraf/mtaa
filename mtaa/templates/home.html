@@ -15,16 +15,18 @@
 
       <div class="w3-card" style="width:100%; overflow:hidden;">
         <header class="w3-container w3-light-grey">
-          <a href="/profile"><img src="{{ user.profile.image.url }}" alt="Avatar" class="w3-left w3-circle" width="50px;" height="50px;"></a>
           <hr>
           <h4><a href="#" style="text-decoration:none;">{{ neighbourhood.name }}</a></h4>
-        </header>
-        <hr>
-        <div class="w3-container" style="object-fit: contain'">
-        </div>
-        <hr>
-        <footer class="w3-container">
           <p class='article-content'>{{ neighbourhood.location }}</p>
+        </header>
+        <br>
+        <div class="w3-container">
+          <img src="{{ neighbourhood.image.url }}" alt="image" style="width:100%">
+        </div>
+        <footer class="w3-container">
+          <br>
+          <button class="btn btn-outline-success center-block">more</button>
+          <br>
         </footer>
       </div>
       <br><br><br><br>
