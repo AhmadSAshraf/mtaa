@@ -35,12 +35,13 @@
             {%if businesses%}
             {%for business in businesses%}
 
-            <p>name: {{business.name}}</p>
-            <p>description: {{business.description}}</p>
-            <p>contact: {{business.email}}</p>
+            <p><b>name:</b> {{business.name}}</p>
+            <p><b>description:</b> {{business.description}}</p>
+            <p><b>contact:</b> {{business.email}}</p>
+            <hr>
             {%endfor%}
             {%else%}
-            <p>no business at the moment</p>
+            <p><b>no business at the moment</b></p>
             {%endif%}
         </div>
 
@@ -56,8 +57,9 @@
             <p><strong>{{post.user.username}}: </strong> {{post.post}}</p>
             {%endfor%}
             {%else%}
-            <p>no business at the moment</p>
+            <p><b>no post by {{user.username}} at the moment</b></p>
             {%endif%}
+            <br>
         </div>
     </div>
 </div>
